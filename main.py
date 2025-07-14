@@ -9,7 +9,7 @@ def main():
 
     # Get path from args
     args = sys.argv
-    
+
     if len(args) < 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
@@ -29,9 +29,7 @@ def main():
         print(f"{i["char"]}: {i["num"]}")
 
     print("============= END ===============")
-    #print(f'{word_count} words found in the document')
 
-    #print(char_count)
 main()
 
     
