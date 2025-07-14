@@ -7,7 +7,7 @@ def get_book_text(filepath):
     Returns:
         str: The content of the book file.
     """
-
+    print(f"Analyzing book found at {filepath}...")
     # Read the file and return the contents as a string
     with open(filepath) as f:
         return f.read()
@@ -44,3 +44,20 @@ def count_chars(input_str):
         char_dict[character] += 1
     
     return char_dict
+
+def format_chars(input_dict):
+    """
+
+    """
+    def sort_on(items):
+        return items["num"]
+    
+    formatted_list = []
+    for key in input_dict:
+        # Skip non alphanumric chars
+        if not key.isalpha():
+            continue
+        formatted_list.append({"char": key, "num": input_dict[key]})
+
+    formatted_list.sort(reverse=True, key=sort_on)
+    return formatted_list
