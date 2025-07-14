@@ -25,3 +25,22 @@ def count_words(input_str):
     words = input_str.split()
 
     return len(words)
+
+def count_chars(input_str):
+    """
+    Reads a string and returns the number of times that each char appears
+    Args:
+        input_str (str): The string to count
+
+    Returns:
+        dict(int): dict of ints containing the count for each char 
+    """
+
+    char_dict = {}
+
+    for character in input_str.lower():
+        if character not in char_dict.keys():
+            char_dict[character] = 0    
+        char_dict[character] += 1
+    
+    return char_dict
